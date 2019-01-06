@@ -1,14 +1,25 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="orange">
     <ion-title>
-      Ionic Blank
+      <div *ngIf="ready">{{name}}'s Location</div>
+      <div *ngIf="!ready">Loading <div class="lds-dual-ring"></div>
+      </div> 
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button
+              (click)="showConfirm()">
+              Exit
+      </button>
+    </ion-buttons>
+    
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
 </ion-content>

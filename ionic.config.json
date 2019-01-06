@@ -1,6 +1,8 @@
 {
   "name": "TaxiTracker",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "5d2285cb"
 }

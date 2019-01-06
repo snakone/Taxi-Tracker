@@ -1,0 +1,45 @@
+<ion-content padding>
+    <ion-slides pager>
+        <ion-slide>
+
+            <ion-toolbar> 
+            </ion-toolbar>
+
+            <img src="assets/imgs/taxi-logo.png" class="slide-image" />
+            <h2 class="slide-title">Enter your Code</h2>
+            <p>Enter your Taxi Code to continue...</p>
+
+            <button ion-button 
+                    color="orange"
+                    class="login"
+                    (click)="presentPrompt()">
+              Sign In
+            </button>
+
+        </ion-slide>
+
+        <ion-slide>
+
+            <ion-toolbar> 
+            </ion-toolbar>
+
+            <img src="assets/imgs/check.jpg" class="slide-image" />
+            
+            <h2 class="slide-title">¿Ready?</h2>
+
+            <button ion-button large clear icon-right color="primary" (click)="login()">
+                Continue
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+        </ion-slide>
+
+    </ion-slides>
+
+
+</ion-content>
+
+<ion-toolbar text-center class="footer"
+(click)="howWorks()">
+<strong>How it works?</strong>
+</ion-toolbar>
